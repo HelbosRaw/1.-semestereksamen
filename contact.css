@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: verdana;
+
+}
+
+/* FONT */
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    position: fixed;
+    max-height: 110px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+     background: rgba(0, 0, 0, 0.2); /* transparent dark tint */
+    backdrop-filter: blur(5px);    /* blurry glass effect */
+    -webkit-backdrop-filter: blur(10px); /* til Safari */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* subtle glass edge */
+}
+
+.navbar li {
+    padding-top: 3px;
+    list-style: none;
+    padding-left: 40px;
+}
+
+.navbar li a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar img {
+    height: 50px;
+}
+
+.spacer {
+    flex: 1;
+    max-width: 870px;
+}
+
+/*banner*/
+main{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-banner {
+    width: 60%;
+    height: 100%;
+    background-image: url("billeder/IMG_6834.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.right-panel {
+    align-items: center;
+    width: 70%;
+    padding: 80px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    /* gradient baggrund */
+    background: linear-gradient(
+        135deg,
+        #000000 0%,
+        #4F23B8 80%,
+        #4F23B8 150%);
+}
+
+label {
+    font-size: 20px;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+.input-box {
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(206, 206, 206);
+    font-size: 16px;
+}
+
+.message-box {
+    height: 150px;
+    resize: none;
+}
+
+.send-btn {
+    margin-top: 20px;
+    padding: 15px;
+    width: 150px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(
+        180deg,
+        #0b7a68 0%,
+        #10c2a4 70%,
+        #15F6D0 200%
+    );
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.right-panel h1{
+font-size: 50px
+}
+
+.top-text{
+    font-size: 20px;
+}
+
+/* FOOTER */
+.container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #1d1d1d;
+    height: 140px;
+    width: 100%;
+}
+
+.footer-logo img {
+    height: 100px;
+    margin-right: 20px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact h2 {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    margin-left: 20px;
+
+}
+.footer-spacer {
+    flex: 1;}
+    
+    @media (max-width: 768px) {
+
+       /* NAVBAR */
+    .navbar {
+        height: 55px; /* mindre højde */
+        padding: 0 10px;
+    }
+
+    .navbar li {
+        padding-left: 15px;
+    }
+
+    .navbar li a {
+        font-size: 1.1em; /* mindre tekst */
+    }
+
+    .navbar img {
+        height: 35px; /* mindre logo */
+    }
+
+    .spacer {
+        display: none; /* fjerner tom plads */
+    }
+
+
+    /* MAIN – stack alt ovenpå hinanden */
+    main {
+        flex-direction: column;
+        width: 100%;        /* ingen 100vw */
+        height: auto;       /* ingen 100vh */
+        padding-top: 60px;  /* plads under navbar */
+        overflow-x: hidden; /* ingen horisontal scroll */
+    }
+
+    .left-banner {
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position: center 70%;
+    }
+
+    .right-panel {
+        width: 100%;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .right-panel h1 {
+        font-size: 2rem;
+    }
+
+    .top-text {
+        font-size: 1.1rem;
+        max-width: 90%;
+    }
+
+    label {
+        align-self: flex-start;
+        margin-left: 5px;
+        font-size: 1.1rem;
+    }
+
+    .input-box {
+        width: 100%;
+        padding: 14px;
+        border-radius: 15px;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    .message-box {
+        height: 130px;
+    }
+
+    .send-btn {
+        width: 140px;
+        padding: 12px;
+        font-size: 1.2rem;
+        border-radius: 30px;
+    }
+
+
+    /* FOOTER – samme som de andre sider */
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;       /* ingen 100vw */
+        height: auto;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .contact {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .contact h2 {
+        margin-left: 0;
+        font-size: 1.2rem;
+    }
+
+    .footer-logo img {
+        height: 70px;
+        margin-top: 10px;
+    }
+}

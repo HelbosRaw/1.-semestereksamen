@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+    background-image:
+        radial-gradient(circle at 20% 30%, #ff00ff40 0%, transparent 60%),
+        radial-gradient(circle at 80% 70%, #00ffff40 0%, transparent 60%),
+        radial-gradient(circle at 50% 90%, #ff880040 0%, transparent 60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: verdana;
+
+}
+
+/* FONT */
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    position: fixed;
+    max-height: 110px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+     background: rgba(0, 0, 0, 0.2); /* transparent dark tint */
+    backdrop-filter: blur(5px);    /* blurry glass effect */
+    -webkit-backdrop-filter: blur(10px); /* til Safari */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* subtle glass edge */
+}
+
+.navbar li {
+    padding-top: 3px;
+    list-style: none;
+    padding-left: 40px;
+}
+
+.navbar li a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar img {
+    height: 50px;
+}
+
+.spacer {
+    flex: 1;
+    padding-left: 0;
+    max-width: 870px;
+}
+
+/*main*/
+main{
+display: flex;
+height: 100vh;
+align-items: center;
+justify-content: flex-start;
+}
+
+.self{
+min-width: 40vw;
+height: 100vh;
+background-image: url("billeder/Mikkel2.png");
+background-size: cover;
+background-position: center;
+mask-image: linear-gradient(to right, black 70%, transparent 100%);
+}
+
+.tekst{
+color: rgb(255, 255, 255);
+margin: 0 0px;
+padding: 0 150px 0 100px;
+}
+
+.tekst h2{
+font-size: 50px;
+
+}
+
+.tekst p{
+font-size: 20px;
+
+}
+.container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #1d1d1d;
+    height: 140px;
+    width: 100%;
+}
+
+.footer-logo img {
+    height: 100px;
+    margin-right: 20px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact h2 {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    margin-left: 20px;
+
+}
+.footer-spacer {
+    flex: 1;}
+
+    @media (max-width: 768px) {
+
+         /* NAVBAR */
+    .navbar {
+        height: 55px; /* mindre højde */
+        padding: 0 10px;
+    }
+
+    .navbar li {
+        padding-left: 15px;
+    }
+
+    .navbar li a {
+        font-size: 1.1em; /* mindre tekst */
+    }
+
+    .navbar img {
+        height: 35px; /* mindre logo */
+    }
+
+    .spacer {
+        display: none; /* fjerner tom plads */
+    }
+
+
+    /* MAIN LAYOUT */
+    main {
+        flex-direction: column;      /* billede over tekst */
+        height: auto;
+        padding-top: 60px;           /* plads under navbar */
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .self {
+        width: 100%;
+        height: 350px;               /* mindre højde på mobil */
+        min-width: 100%;
+        background-position: center;
+        mask-image: none;            /* fjern gradient-mask på mobil */
+    }
+
+    .tekst {
+        padding: 20px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .tekst h2 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+
+    .tekst p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+
+    /* FOOTER */
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .contact {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .contact h2 {
+        margin-left: 0;
+        font-size: 1.2rem;
+    }
+
+    .footer-logo img {
+        height: 70px;
+        margin: 10px 0 0 0;
+    }
+}

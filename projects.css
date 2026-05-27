@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+    background-image:
+        radial-gradient(circle at 20% 30%, #ff00ff40 0%, transparent 60%),
+        radial-gradient(circle at 80% 70%, #00ffff40 0%, transparent 60%),
+        radial-gradient(circle at 50% 90%, #ff880040 0%, transparent 60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: verdana;
+
+}
+
+/* Font */
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    position: fixed;
+    max-height: 110px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar li {
+    padding-top: 3px;
+    list-style: none;
+    padding-left: 40px;
+}
+
+.navbar li a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar img {
+    height: 50px;
+}
+
+.spacer {
+    flex: 1;
+    padding-left: 0;
+    max-width: 870px;
+}
+
+main {
+    width: 100%;
+    padding-top: 80px; /* plads under navbar */
+    color: white;
+}
+
+.overskrift{
+display: flex;
+justify-content: center;
+width: 100vw;
+margin-bottom: 20px;
+}
+
+h1{
+    color: white;
+    font-size: 80px;
+    align-items: center;
+}
+
+.project-row {
+    display: flex;
+    width: 100%;
+    min-height: 320px;
+    padding: 40px 40px;
+    box-sizing: border-box; /*holder billeder og tekst væk fra kanten*/
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* sidste hvide linje */
+.project-row:last-of-type {
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+/* billeder og tekst skifter side per projekt */
+.project-row:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.project-img {
+    flex: 1;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 400px;
+    height: 500px;
+}
+
+
+/* TEXT */
+.project-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px 0 0; 
+    text-align: right;
+    align-items: flex-end; 
+}
+
+.project-row:nth-of-type(even) .project-text {
+    align-items: flex-start; /* hver anden kolonne skubber teksten til venstre */
+}
+
+/* Flip padding + alignment på lige rækker */
+.project-row:nth-of-type(even) .project-text {
+    padding: 0 0 0 40px; 
+    text-align: left;
+}
+
+.project-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.project-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 40rem;
+}
+.project-row:first-of-type {
+    border-top: none;
+}
+
+/* FOOTER */
+.container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #1d1d1d;
+    height: 140px;
+    width: 100%;
+}
+
+.footer-logo img {
+    height: 100px;
+    margin-right: 20px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact h2 {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    margin-left: 20px;
+
+}
+.footer-spacer {
+    flex: 1;}
+
+/*tlf*/
+
+@media (max-width: 768px) {
+
+      /* NAVBAR */
+    .navbar {
+        height: 55px; /* mindre højde */
+        padding: 0 10px;
+    }
+
+    .navbar li {
+        padding-left: 15px;
+    }
+
+    .navbar li a {
+        font-size: 1.1em; /* mindre tekst */
+    }
+
+    .navbar img {
+        height: 35px; /* mindre logo */
+    }
+
+    .spacer {
+        display: none; /* fjerner tom plads */
+    }
+
+    /* Project rows */
+    .project-row {
+        flex-direction: column !important;
+        padding: 20px;
+        text-align: left;
+        min-height: auto;
+    }
+
+    .project-img {
+        width: 100%;
+        max-width: 100%;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .project-img video {
+    aspect-ratio: auto !important;
+    height: auto !important;
+    }
+
+    .project-text {
+        padding: 0 !important;
+        text-align: left !important;
+        align-items: flex-start !important;
+    }
+
+    .project-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .project-text p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    /* Footer */
+ /* FOOTER – samme som de andre sider */
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;       /* ingen 100vw */
+        height: auto;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .contact {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .contact h2 {
+        margin-left: 0;
+        font-size: 1.2rem;
+    }
+
+    .footer-logo img {
+        height: 70px;
+        margin-top: 10px;
+    }
+
+    .contact h2 {
+        margin-left: 0;
+    }
+
+    .project-img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .project-img video {
+    aspect-ratio: auto !important;
+    height: auto !important;
+    }
+
+    .navbar li a {
+        font-size: 1.1em;
+    }
+
+    .navbar {
+        height: 55px;
+        padding: 0 10px;
+    }
+
+    .navbar img {
+        height: 35px;
+    }
+}
