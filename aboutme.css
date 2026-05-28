@@ -23,7 +23,7 @@ body {
 
 /* NAVBAR */
 .navbar {
-    width: 100%;
+    width: 100vw;
     position: fixed;
     max-height: 110px;
     height: 60px;
@@ -31,8 +31,7 @@ body {
     align-items: center;
     z-index: 10;
      background: rgba(0, 0, 0, 0.2); /* transparent dark tint */
-    backdrop-filter: blur(5px);    /* blurry glass effect */
-    -webkit-backdrop-filter: blur(10px); /* til Safari */
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* subtle glass edge */
 }
 
